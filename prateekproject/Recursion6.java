@@ -1,25 +1,25 @@
+package prateekproject;
 
 public class Recursion6 {
-    static boolean b[]=new boolean[26];
-    public static void isDuplicate(String str,int idx,String newstr){
-        if(idx==str.length()){
-           System.out.println(newstr);
-           return;
+    static boolean[] visited = new boolean[26];
+
+    public static void removeDuplicates(String str, int idx, String newStr) {
+        if (idx == str.length()) {
+            System.out.println(newStr);
+            return;
         }
-         char currch=str.charAt(idx);
-         if(b[currch-'a']=true){
-            isDuplicate(str, idx+1, newstr);
-         }
-         else{
-            newstr+=currch;
-            b[currch-'a']=true;
-            isDuplicate(str, idx+1, newstr);
-         }
-
+        char currChar = str.charAt(idx);
+        if (visited[currChar - 'a'] == true) {
+            removeDuplicates(str, idx + 1, newStr);
+        } else {
+            newStr += currChar;
+            visited[currChar - 'a'] = true;
+            removeDuplicates(str, idx + 1, newStr);
+        }
     }
+
     public static void main(String[] args) {
-        String str="abbcdde";
-        isDuplicate(str, 0, "");
+        String str = "abbcdde";
+        removeDuplicates(str, 0, "");
     }
-    }
-
+}

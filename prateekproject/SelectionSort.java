@@ -1,22 +1,23 @@
+package prateekproject;
+
 public class SelectionSort {
     public static void main(String[] args) {
-        int []a={38,52,9,18,6,62,13};
-        int min; int temp=0;
-        for(int i=0;i<a.length;i++){
-            min=i;
-            for( int j=i+1;j<a.length;j++){
-                if(a[j]<a[min]){
-                    min=j;
+        int[] arr = {38, 52, 9, 18, 6, 62, 13};
+        int minIdx;
+        int temp;
+        for (int i = 0; i < arr.length; i++) {
+            minIdx = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[minIdx]) {
+                    minIdx = j;
                 }
             }
-            temp=a[i];
-            a[i]=a[min];
-            a[min]=temp;
-
-
+            temp = arr[i];
+            arr[i] = arr[minIdx];
+            arr[minIdx] = temp;
         }
-        for(int i=0;i<a.length;i++){
-            System.out.print(a[i]+" ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
     }
 }

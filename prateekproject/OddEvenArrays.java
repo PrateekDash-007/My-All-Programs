@@ -1,34 +1,35 @@
+package prateekproject;
 
 import java.util.ArrayList;
 
 public class OddEvenArrays {
     public static void main(String[] args) {
-        int arr[]={8,5,10,12,1,3,4};
-        ArrayList<Integer> al1=new ArrayList<>();
-        ArrayList<Integer> al2=new ArrayList<>();
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]%2==0){
-                al1.add(arr[i]);
-
-            }else{
-                al2.add(arr[i]);
+        int arr[] = {8, 5, 10, 12, 1, 3, 4};
+        ArrayList<Integer> evenList = new ArrayList<>();
+        ArrayList<Integer> oddList = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                evenList.add(arr[i]);
+            } else {
+                oddList.add(arr[i]);
             }
         }
-        int temp1=0;
-        System.out.println("even no. are: ");
-        for(int no:al1){
-            temp1=temp1+no;
-            System.out.print(+no+" ");
+        int evenSum = 0;
+        System.out.println("even numbers are:");
+        for (int no : evenList) {
+            evenSum = evenSum + no;
+            System.out.print(no + " ");
         }
-        System.out.println("\ntotal no of even nos re :"+al1.size());
-        System.out.println("sum of all even nos are: "+temp1);
+        System.out.println("\ntotal count of even numbers: " + evenList.size());
+        System.out.println("sum of all even numbers: " + evenSum);
         System.out.println("---------------------------------");
-        int temp2=0;
-        System.out.println("odd no. are: ");
-        for(int no:al2){
-            System.out.print(+no+" ");
+        int oddSum = 0;
+        System.out.println("odd numbers are:");
+        for (int no : oddList) {
+            oddSum = oddSum + no;
+            System.out.print(no + " ");
         }
-        System.out.println("\ntotal no of odd nos are: "+al2.size());
-        System.out.println("sum of all odd nos are: "+temp2);
+        System.out.println("\ntotal count of odd numbers: " + oddList.size());
+        System.out.println("sum of all odd numbers: " + oddSum);
     }
 }

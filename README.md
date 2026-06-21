@@ -4,13 +4,6 @@ A collection of Java programs covering sorting algorithms, searching, recursion,
 
 ## Table of Contents
 
-### Root Programs
-
-| Program | Description |
-|---------|-------------|
-| [This1.java](This1.java) | Demonstrates the `this` keyword for resolving instance variable shadowing |
-| [This2.java](This2.java) | Demonstrates passing `this` reference to another class constructor |
-
 ### Sorting Algorithms
 
 | Program | Description |
@@ -28,7 +21,7 @@ A collection of Java programs covering sorting algorithms, searching, recursion,
 | Program | Description |
 |---------|-------------|
 | [BinarySearch.java](prateekproject/BinarySearch.java) | Binary search on a sorted integer array |
-| [LinerSearch.java](prateekproject/LinerSearch.java) | Linear search to find an item in an unsorted array |
+| [LinearSearch.java](prateekproject/LinearSearch.java) | Linear search to find an item in an unsorted array |
 
 ### Array Operations
 
@@ -59,9 +52,9 @@ A collection of Java programs covering sorting algorithms, searching, recursion,
 
 | Program | Description |
 |---------|-------------|
-| [CommenEle.java](prateekproject/CommenEle.java) | Find common elements between two arrays using nested loops and HashSet |
-| [CommenEle2.java](prateekproject/CommenEle2.java) | Find common elements using a single HashSet |
-| [CommenEle3.java](prateekproject/CommenEle3.java) | Find common elements after removing duplicates from both arrays |
+| [CommonElement.java](prateekproject/CommonElement.java) | Find common elements between two arrays using nested loops and HashSet |
+| [CommonElement2.java](prateekproject/CommonElement2.java) | Find common elements using a single HashSet |
+| [CommonElement3.java](prateekproject/CommonElement3.java) | Find common elements after removing duplicates from both arrays |
 
 ### Math and Recursion
 
@@ -72,7 +65,7 @@ A collection of Java programs covering sorting algorithms, searching, recursion,
 | [Prime.java](prateekproject/Prime.java) | Check if a number is prime |
 | [Prime1To100.java](prateekproject/Prime1To100.java) | Print all prime numbers from 1 to 100 |
 | [Leapyear.java](prateekproject/Leapyear.java) | Check if a year is a leap year |
-| [Numpalindrom.java](prateekproject/Numpalindrom.java) | Print a numeric palindrome pattern |
+| [NumPalindrome.java](prateekproject/NumPalindrome.java) | Print a numeric palindrome pattern |
 
 ### Pattern Printing
 
@@ -83,9 +76,9 @@ A collection of Java programs covering sorting algorithms, searching, recursion,
 | [Star3.java](prateekproject/Star3.java) | Diamond-like star pattern (triangle + inverted triangle) |
 | [Str4.java](prateekproject/Str4.java) | Right-aligned triangle of stars |
 | [Str7.java](prateekproject/Str7.java) | Inverted left-aligned triangle of stars |
-| [StrDimond.java](prateekproject/StrDimond.java) | Diamond pattern of stars |
+| [StarDiamond.java](prateekproject/StarDiamond.java) | Diamond pattern of stars |
 | [Rhombus.java](prateekproject/Rhombus.java) | Rhombus pattern of stars |
-| [Numpiramid.java](prateekproject/Numpiramid.java) | Number pyramid pattern |
+| [NumPyramid.java](prateekproject/NumPyramid.java) | Number pyramid pattern |
 | [Num5.java](prateekproject/Num5.java) | Incremental number triangle (1, 12, 123, ...) |
 | [Num6.java](prateekproject/Num6.java) | Decreasing-width number rows |
 | [Num7.java](prateekproject/Num7.java) | Continuous number triangle (Floyd's triangle) |

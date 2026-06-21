@@ -1,25 +1,25 @@
+package prateekproject;
+
 public class FactorialByRecursion {
-    int calcFact(int no){
-        if(no<0){
-            throw new IllegalArgumentException("Factorial is not defined for negative numbers: "+no);
+    int calcFact(int num) {
+        if (num < 0) {
+            throw new IllegalArgumentException("Factorial is not defined for negative numbers: " + num);
         }
-        if(no==0||no==1){
-        return 1;//base case 
+        if (num == 0 || num == 1) {
+            return 1; //base case
+        } else {
+            return num * calcFact(num - 1);
         }
-        else
-        {
-            return no * calcFact(no-1);
-        }
-   }
-   public static void main(String[] args) {
-    int no=5;
-    FactorialByRecursion ob=new FactorialByRecursion();
-    try {
-        int fact=ob.calcFact(no);
-        System.out.println("factor of "+no+" is "+fact);
-    } catch (IllegalArgumentException e) {
-        System.out.println("Error: "+e.getMessage());
     }
 
-   }
+    public static void main(String[] args) {
+        int num = 5;
+        FactorialByRecursion obj = new FactorialByRecursion();
+        try {
+            int fact = obj.calcFact(num);
+            System.out.println("factorial of " + num + " is " + fact);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 }
