@@ -5,13 +5,39 @@
 *.jar
 *.war
 *.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# virtual machine crash logs
+hs_err_pid*
+replay_pid*
 
 # IDE files
 .idea/
 *.iml
+*.iws
+*.ipr
 .vscode/
+.settings/
+.project
+.classpath
 *.swp
-
-# OS files
+*~
 .DS_Store
 Thumbs.db
+
+# Build directories
+bin/
+out/
+build/
+target/
