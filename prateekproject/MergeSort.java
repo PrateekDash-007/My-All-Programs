@@ -20,7 +20,7 @@ public class MergeSort{
     while(idx1<=mid){
         merged[x++]=arr[idx1++];
     }
-    while(idx1<=ei){
+    while(idx2<=ei){
         merged[x++]=arr[idx2++];
     }
     for(int i=0,j=si;i<merged.length;i++,j++){
@@ -52,7 +52,7 @@ public class MergeSort{
 
         divide(arr, 0, n-1);
         //print
-        for(int i=0;i<n;n++){
+        for(int i=0;i<n;i++){
             System.out.print(arr[i]+" ");
         }
         System.out.println();

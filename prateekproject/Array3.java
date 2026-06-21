@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Array3 {
 
@@ -8,7 +9,14 @@ public class Array3 {
         int size = 0;
         while (true) {
             System.out.println("Welcome to Array class" + "\n" + "press 1 for creating an array" + "\n" + "press 2 for display your array" + "\n" + "press 3 for insert element in your array " + "\n" + "press 4 for deleting the element in your array" + "\n" + "" + "press 0 for exit");
-            int c = sc.nextInt();
+            int c;
+            try {
+                c = sc.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Please enter a valid integer");
+                sc.next();
+                continue;
+            }
 
             switch (c) {
                 case 1:
@@ -18,17 +26,55 @@ public class Array3 {
                     }
 
                     System.out.println("Enter maximum size of your array ");
-                    size = sc.nextInt();
+                    try {
+                        size = sc.nextInt();
+                    } catch (InputMismatchException e) {
+                        System.out.println("Error: Please enter a valid integer for size");
+                        sc.next();
+                        break;
+                    }
+                    if (size <= 0) {
+                        System.out.println("Error: Array size must be positive");
+                        size = 0;
+                        break;
+                    }
                     a = new int[size];
                     System.out.println("Enter no.of items to be store in array ");
-                    n = sc.nextInt();
+                    try {
+                        n = sc.nextInt();
+                    } catch (InputMismatchException e) {
+                        System.out.println("Error: Please enter a valid integer for item count");
+                        sc.next();
+                        a = null;
+                        size = 0;
+                        break;
+                    }
                     if (n >= size) {
                         System.out.println("no.item can not be greater or equal to the array ");
+                        n = 0;
+                        a = null;
+                        size = 0;
+                        break;
+                    }
+                    if (n < 0) {
+                        System.out.println("Error: Number of items cannot be negative");
+                        n = 0;
+                        a = null;
+                        size = 0;
                         break;
                     }
                     System.out.println("Enter" + n + "item");
-                    for (int i = 0; i < n; i++) {
-                        a[i] = sc.nextInt();
+                    try {
+                        for (int i = 0; i < n; i++) {
+                            a[i] = sc.nextInt();
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Error: Please enter valid integers for array elements");
+                        sc.next();
+                        n = 0;
+                        a = null;
+                        size = 0;
+                        break;
                     }
                     System.out.println("Array created successfully");
                     break;
@@ -53,13 +99,27 @@ public class Array3 {
                         break;
                     }
                     System.out.println("Enter position where you insurt : ");
-                    int pos = sc.nextInt();
+                    int pos;
+                    try {
+                        pos = sc.nextInt();
+                    } catch (InputMismatchException e) {
+                        System.out.println("Error: Please enter a valid integer for position");
+                        sc.next();
+                        break;
+                    }
                     if (pos < 0 || pos >= size) {
                         System.out.println("invalid position");
                         break;
                     }
                     System.out.println("Enter your new item ");
-                    int item = sc.nextInt();
+                    int item;
+                    try {
+                        item = sc.nextInt();
+                    } catch (InputMismatchException e) {
+                        System.out.println("Error: Please enter a valid integer for the item");
+                        sc.next();
+                        break;
+                    }
                     for (int i = n - 1; i >= pos; i--) {
                         a[i + 1] = a[i];
                     }
@@ -73,7 +133,13 @@ public class Array3 {
                         break;
                     }
                     System.out.println("Enter position: ");
-                    pos = sc.nextInt();
+                    try {
+                        pos = sc.nextInt();
+                    } catch (InputMismatchException e) {
+                        System.out.println("Error: Please enter a valid integer for position");
+                        sc.next();
+                        break;
+                    }
                     if (pos < 0 || pos >= n) {
                         System.out.println("invalid position ");
                         break;
@@ -86,6 +152,7 @@ public class Array3 {
                     break;
                 case 0:
                     System.out.println("Exiting the program");
+                    sc.close();
                     return;
                 default:
                     System.out.println("invalid input");
