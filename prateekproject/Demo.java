@@ -1,4 +1,6 @@
-class Demo{
+package prateekproject;
+
+class Demo {
     public static void main(String[] args) {
         System.out.println("prateek");
     }

@@ -1,49 +1,47 @@
+package prateekproject;
+
 public class QuickSortMiddle {
+    public static int partition(int arr[], int low, int high) {
+        int mid = low + (high - low) / 2;
+        int pivot = arr[mid];
+
+        //move pivot to end
+        int temp = arr[mid];
+        arr[mid] = arr[high];
+        arr[high] = temp;
+
+        int i = low - 1;
+        for (int j = low; j < high; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        i++;
+        temp = arr[i];
+        arr[i] = arr[high];
+        arr[high] = temp;
+        return i;
+    }
+
+    public static void quicksort(int arr[], int low, int high) {
+        if (low < high) {
+            int pidx = partition(arr, low, high);
+            quicksort(arr, low, pidx - 1);
+            quicksort(arr, pidx + 1, high);
+        }
+    }
+
     public static void main(String[] args) {
-        int[]arr={15,9,7,13,12,16,14,18,11};
-        int leng=arr.length;
+        int[] arr = {6, 3, 9, 5, 2, 8};
+        int n = arr.length;
 
-       QuickSortMiddle qms=new QuickSortMiddle();
-        qms.quickSortRecursion(arr,0,leng-1);
-        qms.printArray(arr);
-
-    }
-    int partition (int[]arr,int low,int high)
-    {
-        int pivot=arr[(low+high)/2];
-        while(low<=high){
-            while(arr[low]<pivot)
-            {
-                low++;
-            }
-            while(arr[high]>pivot)
-            {
-                high--;
-            }
-            if(low<=high){
-                int temp=arr[low];
-                arr[low]=arr[high];
-                arr[high]=temp;
-                low++;
-                high--;
-
+        quicksort(arr, 0, n - 1);
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
         }
-        }
-        return low;
-
-    }
-    void quickSortRecursion(int[]arr,int low,int high){
-        int pi=partition(arr,low,high);
-        if(low<pi-1){
-            quickSortRecursion(arr, low, pi-1);
-        }
-        if(pi<high){
-            quickSortRecursion(arr, pi, high);
-        }
-    }
-    void printArray(int[]arr){
-        for(int i:arr){
-            System.out.print(i+" ");
-        }
+        System.out.println();
     }
 }

@@ -1,23 +1,23 @@
+package prateekproject;
+
 public class SelectionSort2 {
-     public static void main(String[] args) {
-        String [] a={"Prateek","Nimesh","Sinay","Suprativ","Ansuman","Dikhita"};
-        int min; 
+    public static void main(String[] args) {
+        String[] names = {"Prateek", "Nimesh", "Sinay", "Suprativ", "Ansuman", "Dikhita"};
+        int minIdx;
         String temp;
-        for(int i=0;i<a.length;i++){
-            min=i;
-            for( int j=i+1;j<a.length;j++){
-                if(a[j].compareTo (a[min])<0){
-                    min=j;
+        for (int i = 0; i < names.length; i++) {
+            minIdx = i;
+            for (int j = i + 1; j < names.length; j++) {
+                if (names[j].compareTo(names[minIdx]) < 0) {
+                    minIdx = j;
                 }
             }
-            temp=a[i];
-            a[i]=a[min];
-            a[min]=temp;
-
-
+            temp = names[i];
+            names[i] = names[minIdx];
+            names[minIdx] = temp;
         }
-        for(int i=0;i<a.length;i++){
-            System.out.print(a[i]+" ");
+        for (int i = 0; i < names.length; i++) {
+            System.out.print(names[i] + " ");
         }
     }
 }

@@ -1,13 +1,16 @@
+package prateekproject;
+
 public class Recursion {
-    public static void printNumb(int n){
-        if(n==6){
+    public static void printNumbers(int n) {
+        if (n == 6) {
             return;
         }
         System.out.println(n);
-        printNumb(n+1);
+        printNumbers(n + 1);
     }
+
     public static void main(String[] args) {
-        int n=1;
-        printNumb(n);
+        int n = 1;
+        printNumbers(n);
     }
 }

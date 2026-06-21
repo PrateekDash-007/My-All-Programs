@@ -1,19 +1,18 @@
+package prateekproject;
+
 public class Prime {
     public static void main(String[] args) {
-        int no=7;
-        int temp=0;
-        for(int i=2;i<=no-1;i++){
-         if(no%i==0){
-            temp=temp+1;
-         }
-
+        int num = 7;
+        int divisorCount = 0;
+        for (int i = 2; i <= num - 1; i++) {
+            if (num % i == 0) {
+                divisorCount++;
+            }
         }
-        if(temp==0){
-            System.out.println(no+"is prime no");
-
-        }
-        else{
-            System.out.println(no+"is not prime");
+        if (divisorCount == 0) {
+            System.out.println(num + " is a prime number");
+        } else {
+            System.out.println(num + " is not a prime number");
         }
     }
 }
