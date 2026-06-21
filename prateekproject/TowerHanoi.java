@@ -1,0 +1,21 @@
+public class TowerHanoi {
+    static int count=0;
+    public static void towerOfHanoi(int n,String src,String helper,String dest){
+        
+        if(n==1){
+            System.out.println("Transfer the disk "+n+"from"+src+"to"+dest);
+            count++;
+            return;
+        }
+        towerOfHanoi(n-1, src, dest,helper);
+        count++;
+        System.out.println("Transfer the disk "+n+"from"+src+"to"+dest);
+        towerOfHanoi(n-1, helper, src, dest);
+       
+    }
+    public static void main(String[] args) {
+        int n=3;
+        towerOfHanoi(n, "S", "H", "D");
+        System.out.println("Total steps are "+count);
+    }
+}
