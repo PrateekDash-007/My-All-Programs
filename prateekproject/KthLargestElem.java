@@ -5,7 +5,7 @@ public class KthLargestElem {
         Scanner sc=new Scanner(System.in);
         try {
             System.out.println("Enter your number up to");
-            int k=sc.nextInt();      
+            int k=sc.nextInt();
             int temp;
             int arr[]={5,4,7,9,2,1,8,3};
             if(k<=0 || k>arr.length){

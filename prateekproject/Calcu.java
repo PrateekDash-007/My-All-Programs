@@ -15,10 +15,10 @@ public class Calcu {public static void main(String[] args) {
             System.out.println("Addition:"+res);
              break;
              case("-") :res=no1-no2;
-            System.out.println("substation:"+res);   
+            System.out.println("substation:"+res);
                 break;
                 case("*") :res=no1*no2;
-            System.out.println("multipication:"+res);   
+            System.out.println("multipication:"+res);
                 break;
                 case("/") :
                     if(no2==0){
@@ -26,7 +26,7 @@ public class Calcu {public static void main(String[] args) {
                         break;
                     }
                     res=no1/no2;
-            System.out.println("divoision:"+res);   
+            System.out.println("divoision:"+res);
                 break;
             default:
             System.out.println("Invalid operator: "+sym+". Please use +, -, *, or /");
