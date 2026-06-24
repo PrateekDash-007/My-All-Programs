@@ -7,9 +7,6 @@ public class InsertAnElem_InArray {
             arr[i]=arr[i-1];
         }
         arr[pos-1]=element;
-        for(int i=0;i<arr.length;i++){
-            System.out.print(" "+arr[i]);
-        }
+        ArrayUtils.printArray(arr);
     }
-    
 }

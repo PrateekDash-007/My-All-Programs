@@ -3,10 +3,9 @@ public class QuickSortMiddle {
         int[]arr={15,9,7,13,12,16,14,18,11};
         int leng=arr.length;
 
-       QuickSortMiddle qms=new QuickSortMiddle();
+        QuickSortMiddle qms=new QuickSortMiddle();
         qms.quickSortRecursion(arr,0,leng-1);
-        qms.printArray(arr);
-
+        ArrayUtils.printArray(arr);
     }
     int partition (int[]arr,int low,int high)
     {
@@ -21,16 +20,12 @@ public class QuickSortMiddle {
                 high--;
             }
             if(low<=high){
-                int temp=arr[low];
-                arr[low]=arr[high];
-                arr[high]=temp;
+                ArrayUtils.swap(arr, low, high);
                 low++;
                 high--;
-
-        }
+            }
         }
         return low;
-
     }
     void quickSortRecursion(int[]arr,int low,int high){
         int pi=partition(arr,low,high);
@@ -39,11 +34,6 @@ public class QuickSortMiddle {
         }
         if(pi<high){
             quickSortRecursion(arr, pi, high);
-        }
-    }
-    void printArray(int[]arr){
-        for(int i:arr){
-            System.out.print(i+" ");
         }
     }
 }
